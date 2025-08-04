@@ -1,6 +1,6 @@
 # Brain-Tumor-App
 
-Brain Tumor Classification & Segmentation Web App
+Brain Tumor Classification & Segmentation Web App   
 This project is a full-stack AI-powered Flask web application that allows users to **upload brain MRI images** and receive:
 
 -  **Classification**: Determines whether the brain MRI shows signs of a tumor.

@@ -19,20 +19,20 @@ This project is a full-stack AI-powered Flask web application that allows users 
 
 # Model Training
 
-Notebooks for training (Classification.ipynb and Segmentation.ipynb) are included.
-U-Net was used for segmentation with augmentation.
-ResNet50 used as feature extractor for classification.
+Notebooks for training (Classification.ipynb and Segmentation.ipynb) are included.  
+U-Net was used for segmentation with augmentation.  
+ResNet50 used as feature extractor for classification.  
 
-# Project Structure
-├── app.py # Flask app
-├── models/ # Pre-trained Keras models
-│ ├── classification_model.keras
-│ └── segmentation_model.keras
-├── static/ # CSS / image assets
-├── templates/ # HTML templates
-├── requirements.txt # All required dependencies
-├── Classification.ipynb # Classification training notebook
-├── Segmentation.ipynb # Segmentation training notebook
+# Project Structure  
+├── app.py # Flask app  
+├── models/ # Pre-trained Keras models  
+│ ├── classification_model.keras  
+│ └── segmentation_model.keras  
+├── static/ # CSS / image assets  
+├── templates/ # HTML templates  
+├── requirements.txt # All required dependencies  
+├── Classification.ipynb # Classification training notebook  
+├── Segmentation.ipynb # Segmentation training notebook  
 
 
 ---
@@ -41,21 +41,21 @@ ResNet50 used as feature extractor for classification.
 
 1. Clone the Repository
 
-git clone https://github.com/your-username/brain-tumor-flask-app.git
-cd brain-tumor-flask-app
+git clone https://github.com/your-username/brain-tumor-flask-app.git  
+cd brain-tumor-flask-app  
 
-2. Set up the Python Environment
+2. Set up the Python Environment  
 
-pip install -r requirements.txt
+pip install -r requirements.txt  
 
-3. Download the Pretrained Models
-Download the .keras model files from the  GitHub Releases page.
+3. Download the Pretrained Models  
+Download the .keras model files from the  GitHub Releases page.  
 
-Extract them into the models/ folder like this:
-models/
-├── classification_model.keras
-└── segmentation_model.keras
+Extract them into the models/ folder like this:  
+models/  
+├── classification_model.keras  
+└── segmentation_model.keras  
 
-4. Run the App
+4. Run the App  
    
-python app.py
+python app.py  

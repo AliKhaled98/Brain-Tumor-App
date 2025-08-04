@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Analysis Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .header {
+            background-color: #2d3748;
+            color: white;
+        }
+        .result-card {
+            background-color: #ffffff;
+            border-left: 4px solid #4a90e2;
+        }
+        .image-container img {
+            max-height: 300px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="header p-4 text-center">
+        <h1 class="text-2xl font-bold">Brain Tumor Analysis Result</h1>
+        <p class="text-sm">Review the analysis of your uploaded MRI</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl result-card">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Analysis Results</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Original Image -->
+                <div class="image-container">
+                    <img src="/static/{{ image_path }}" alt="Uploaded MRI" class="w-full rounded">
+                    <p class="text-center text-gray-600 mt-2">Original MRI Image</p>
+                </div>
+                <!-- Segmentation Mask -->
+                <div class="image-container">
+                    <img src="/static/{{ mask_path }}" alt="Segmentation Mask" class="w-full rounded">
+                    <p class="text-center text-gray-600 mt-2">Segmentation Mask</p>
+                </div>
+            </div>
+            <div class="mt-6">
+                <p class="text-lg font-medium">Classification: <span class="text-blue-600">{{ class_label }}</span></p>
+                <p class="text-lg font-medium">Confidence: <span class="text-green-600">{{ class_confidence }}</span></p>
+                <a href="/" class="mt-4 inline-block btn-primary text-white px-4 py-2 rounded hover:shadow-md">Upload Another Image</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-auto">
+        <p>&copy; 2025 Brain Tumor Analyzer by Ali Khaled. All rights reserved.</p>
+    </footer>
+</body>
+</html>
